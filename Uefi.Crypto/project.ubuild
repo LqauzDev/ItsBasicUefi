@@ -1,0 +1,6 @@
+name=Uefi.Crypto
+type=lib
+sources=src/crypto.c
+includes=include ../Uefi.Core/include ../Uefi.StdLib/include
+output=libuefi_crypto.a
+depends=Uefi.Core Uefi.StdLib

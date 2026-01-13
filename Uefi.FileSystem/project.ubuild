@@ -1,0 +1,6 @@
+name=Uefi.FileSystem
+type=lib
+sources=src/filesystem.c
+includes=include ../Uefi.Core/include ../Uefi.StdLib/include
+output=libuefi_filesystem.a
+depends=Uefi.Core Uefi.StdLib

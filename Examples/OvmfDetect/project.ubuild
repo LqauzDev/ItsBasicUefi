@@ -1,0 +1,6 @@
+name=OvmfDetect
+type=app
+sources=main.c
+includes=include ../../Uefi.Core/include ../../Uefi.StdLib/include ../../Uefi.Ovmf/include ../../Uefi.Timer/include
+output=ovmf_detect.efi
+depends=Uefi.Core Uefi.StdLib Uefi.Ovmf Uefi.Timer

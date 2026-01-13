@@ -1,0 +1,6 @@
+name=CryptoDemo
+type=app
+sources=main.c
+includes=include ../../Uefi.Core/include ../../Uefi.StdLib/include ../../Uefi.Crypto/include
+output=crypto_demo.efi
+depends=Uefi.Core Uefi.StdLib Uefi.Crypto

@@ -1,0 +1,6 @@
+name=Uefi.Graphics
+type=lib
+sources=src/graphics.c
+includes=include ../Uefi.Core/include ../Uefi.StdLib/include
+output=libuefi_graphics.a
+depends=Uefi.Core Uefi.StdLib

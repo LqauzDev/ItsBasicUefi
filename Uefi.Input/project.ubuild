@@ -1,0 +1,6 @@
+name=Uefi.Input
+type=lib
+sources=src/input.c
+includes=include ../Uefi.Core/include ../Uefi.StdLib/include
+output=libuefi_input.a
+depends=Uefi.Core Uefi.StdLib

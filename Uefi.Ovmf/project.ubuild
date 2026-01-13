@@ -1,0 +1,6 @@
+name=Uefi.Ovmf
+type=lib
+sources=src/ovmf.c
+includes=include ../Uefi.Core/include ../Uefi.StdLib/include
+output=libuefi_ovmf.a
+depends=Uefi.Core Uefi.StdLib

@@ -1,0 +1,6 @@
+name=Uefi.StdLib
+type=lib
+sources=src/stdlib.c src/string.c src/stdio.c
+includes=include ../Uefi.Core/include
+output=libuefi_std.a
+depends=Uefi.Core

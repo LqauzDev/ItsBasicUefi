@@ -1,0 +1,6 @@
+name=HelloWorld
+type=app
+sources=main.c
+includes=../../Uefi.Core/include ../../Uefi.StdLib/include
+output=hello.efi
+depends=Uefi.Core Uefi.StdLib

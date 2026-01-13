@@ -1,0 +1,6 @@
+name=Uefi.Core
+type=lib
+sources=src/uefi_lib.c
+includes=include
+output=libuefi_core.a
+depends=

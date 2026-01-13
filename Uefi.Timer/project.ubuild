@@ -1,0 +1,6 @@
+name=Uefi.Timer
+type=lib
+sources=src/timer.c
+includes=include ../Uefi.Core/include ../Uefi.StdLib/include
+output=libuefi_timer.a
+depends=Uefi.Core Uefi.StdLib

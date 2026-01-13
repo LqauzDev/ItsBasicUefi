@@ -1,0 +1,31 @@
+[core]
+    autocrlf = false
+    safecrlf = true
+    filemode = false
+
+[push]
+    default = simple
+
+[pull]
+    rebase = true
+
+[branch "main"]
+    mergeoptions = --no-ff
+
+[apply]
+    whitespace = warn
+
+[diff]
+    algorithm = patience
+
+[status]
+    showUntrackedFiles = normal
+
+[alias]
+    st = status
+    co = checkout
+    br = branch
+    ci = commit
+    unstage = reset HEAD --
+    last = log -1 HEAD
+    visual = !gitk

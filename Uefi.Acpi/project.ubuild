@@ -1,0 +1,6 @@
+name=Uefi.Acpi
+type=lib
+sources=src/acpi.c
+includes=include ../Uefi.Core/include ../Uefi.StdLib/include
+output=libuefi_acpi.a
+depends=Uefi.Core Uefi.StdLib

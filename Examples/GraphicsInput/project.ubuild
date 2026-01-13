@@ -1,0 +1,6 @@
+name=GraphicsInput
+type=app
+sources=main.c
+includes=include ../../Uefi.Core/include ../../Uefi.StdLib/include ../../Uefi.Graphics/include ../../Uefi.Input/include ../../Uefi.Timer/include
+output=graphics_input.efi
+depends=Uefi.Core Uefi.StdLib Uefi.Graphics Uefi.Input Uefi.Timer

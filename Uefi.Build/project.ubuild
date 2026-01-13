@@ -1,0 +1,6 @@
+name=Uefi.Build
+type=tool
+sources=main.c
+includes=
+output=uefibuild
+depends=
