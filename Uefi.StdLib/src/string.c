@@ -238,6 +238,12 @@ char* strtok(char* str, const char* delim) {
     } else if (!strtok_str) {
         return NULL;
     }
+
+    strtok_str += strspn(strtok_str, delim);
+    if (*strtok_str == '\0') {
+        strtok_str = NULL;
+        return NULL;
+    }
     
     token = strtok_str;
     strtok_str += strcspn(strtok_str, delim);
