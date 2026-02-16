@@ -1,0 +1,6 @@
+name=Uefi.Memory
+type=lib
+sources=src/memory.c
+includes=include ../Uefi.Core/include
+output=libuefi_memory.a
+depends=Uefi.Core
