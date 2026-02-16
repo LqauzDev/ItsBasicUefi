@@ -102,6 +102,16 @@ target_include_directories(Uefi.Timer PUBLIC
 )
 target_link_libraries(Uefi.Timer Uefi.Core Uefi.StdLib)
 
+# Memory library
+add_library(Uefi.Memory STATIC
+    Uefi.Memory/src/memory.c
+)
+target_include_directories(Uefi.Memory PUBLIC
+    Uefi.Memory/include
+    Uefi.Core/include
+)
+target_link_libraries(Uefi.Memory Uefi.Core)
+
 # Examples
 add_executable(HelloWorld.efi Examples/HelloWorld/main.c)
 target_include_directories(HelloWorld.efi PRIVATE 
@@ -139,7 +149,7 @@ target_link_libraries(CryptoDemo.efi Uefi.Core Uefi.StdLib Uefi.Crypto)
 
 # Custom target for building all libraries
 add_custom_target(libs
-    DEPENDS Uefi.Core Uefi.StdLib Uefi.Graphics Uefi.Input Uefi.Crypto Uefi.Acpi Uefi.Ovmf Uefi.Timer
+    DEPENDS Uefi.Core Uefi.StdLib Uefi.Graphics Uefi.Input Uefi.Crypto Uefi.Acpi Uefi.Ovmf Uefi.Timer Uefi.Memory
 )
 
 # Custom target for building all examples
@@ -153,12 +163,12 @@ add_custom_target(all
 )
 
 # Install targets
-install(TARGETS Uefi.Core Uefi.StdLib Uefi.Graphics Uefi.Input Uefi.Crypto Uefi.Acpi Uefi.Ovmf Uefi.Timer
+install(TARGETS Uefi.Core Uefi.StdLib Uefi.Graphics Uefi.Input Uefi.Crypto Uefi.Acpi Uefi.Ovmf Uefi.Timer Uefi.Memory
     ARCHIVE DESTINATION lib/uefi
 )
 
 install(DIRECTORY Uefi.Core/include/ Uefi.StdLib/include/ Uefi.Graphics/include/ 
                 Uefi.Input/include/ Uefi.Crypto/include/ Uefi.Acpi/include/ 
-                Uefi.Ovmf/include/ Uefi.Timer/include/
+                Uefi.Ovmf/include/ Uefi.Timer/include/ Uefi.Memory/include/
     DESTINATION include/uefi
 )

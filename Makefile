@@ -69,6 +69,7 @@ build-libs: build-system
 	@$(BUILD_DIR)$(SEP)ubuild$(if $(filter Windows,$(DETECTED_OS)),.exe,) build Uefi.Timer
 	@$(BUILD_DIR)$(SEP)ubuild$(if $(filter Windows,$(DETECTED_OS)),.exe,) build Uefi.FileSystem
 	@$(BUILD_DIR)$(SEP)ubuild$(if $(filter Windows,$(DETECTED_OS)),.exe,) build Uefi.Network
+	@$(BUILD_DIR)$(SEP)ubuild$(if $(filter Windows,$(DETECTED_OS)),.exe,) build Uefi.Memory
 
 # Build all examples
 .PHONY: build-examples
